@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<style>
+    *{
+        font-family: "微軟正黑體";
+        letter-spacing: 1px;
+    }
+    h6{
+    font-size: 16px;
+    margin: 0;
+}
+#Btn{
+    font-size: 16px;
+}
+.box{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border:solid 1px #000;
+    transition: 1s;
+}
+.box.rotate{
+    transform: rotate(45deg);
+}
+.ull{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.ull li{
+    border:solid 1px #888;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ull li.active{
+    background: #888;
+    color: #fff;
+} 
+
+.liha li{
+    display: inline-block;
+    border:solid 1px;
+    margin: 0;
+}
+.liha li:hover{
+    cursor: pointer;
+    background: pink;
+}
+.liha li .active{
+    background: pink;
+}
+.box:last-child
+
+    </style>
+<style>
+    .mouse{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: brown;
+    position: fixed;
+    z-index: -9999;
+}
+.splcie{
+    text-decoration: line-through;
+}
+</style>
+
+<body class="body">
+    
+<ul class="bigtitle">
+    <li>
+        <a href="javascript:;" class="a1">javascript-1</a>
+        <a href="javascript:;" class="a2" style="display: none;">javascript-2</a>
+        <a href="javascript:;" class="a3">Vue-1</a>
+        <a href="javascript:;" class="a4">Vue-2</a>
+    </li>
+</ul>
+ <div class="block00 block01"><!-- javascript-六角 -->
+
+<div>1.當input的type="text"時，可以撈它的value。另也可以撈input的type</div> 
+<div>請看console.log</div> 
+<input type="text" id="abc" value="可以看到我的value">
+
+
+
+
+<p id="pp">2.e.target測試，請點我</p>
+
+<div>3.e.target了解目前點擊的位置以及得知e.target.nodeName，下面是UL清單，請點看看</div>
+<ul class="ul">
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><p>我是p</p></li>
+</ul>
+
+<a class="aaa" href="">4.e.preventDefault()讓a連結的href=""取消</a>
+
+<h3>5.代辦清單。設定值localStorage.setItem("","")、取值localStorage.getItem('')、陣列字串化JSON.stringify()、轉陣列出來JSON.parse()</h3>
+<input type="text" class="wordlist" aria-required="true">
+<input type="submit" value="加入" class="addlist">
+<input type="button" value="清除" class="removelist">
+<ul class="list" style="padding: 10px; background: #999; width: 300px; list-style: none; color: #fff;">
+</ul>
+
+
+
+<div>6.事件change用法，切換選項會印出在UL</div>
+
+<select name="" id="sel">
+    <option value="西屯區">西屯區</option>
+    <option value="北屯區">北屯區</option>
+</select>
+<ul class="ul0"></ul>
+
+
+
+
+
+<p>7.keydown事件搭配e.keyCode+"(這是鍵盤代號)"就可以執行動作。擲遠比賽，按Enter開始</p>
+<div class="circle circle3"><p></p></div>
+<div class="circle circle2"><p></p></div>
+<div class="circle circle1"><p></p></div>
+
+
+
+
+<div>8.Math.random亂數搭配querySelectorAll陣列[i]+input的type="text"時，可以撈它的value</div>
+<span class="spp">1</span><input type="text" class="ip ip0" value="麥當勞">
+<span class="spp">2</span><input type="text" class="ip"  value="肯德基">
+<span class="spp">3</span><input type="text" class="ip"  value="中工燒臘">
+<span class="spp">4</span><input type="text" class="ip"  value="大浦鐵板燒">
+<span class="spp">5</span><input type="text" class="ip"  value="雞腿飯">
+<input type="submit" class="ipx" value="幫我決定今天吃啥吧!">
+<p class="ipy"></p>
+
+
+
+<div class="mouse"></div>
+
+
+<div>9.先監聽大的範圍ul，然後再用e.taget 選li，最後用if來篩選正確的nodeName，在吐想要的內容到其他地方</div>
+<ul class="ul00" style="background: #999;padding: 10px 0px;">
+    <h2>選擇你喜歡得明星吧!</h2>
+    <li>王大號</li>
+    <li>陳先努</li>
+    <li>張你海</li>
+    <li>震成工</li>
+    <li>王澤天</li>
+    <input type="submit" style="margin-top: 20px; display: inline-block;" >
+  
+</ul>
+
+<p class="ul01"></p>
+
+
+
+
+
+<h3>10.只寫一個ul節點，document.createElement('')創造節點+appendChild()增加子元素節點</h3>
+<ul class="fmm">
+</ul>
+
+
+<h3>11.Ajax-GET-練習 測試new XMLHttpRequest。讀取JOSN網址的方式</h3>
+<ul class="happy0"></ul>
+
+<h3>12.Ajax-POST-1練習 application/x-www-form-urlencoded </h3>
+<form action="">
+    帳號:<input type="text" name="email" class="acc01" value="xxccass11254545465xxx45006adddddddvvvvvvvaa5@gmail.com">
+    密碼:<input type="text" name="password" class="pass01" value="2135sdfdfeeee">
+    <input type="submit" value="送出" class="sub01">
+</form>
+<p class="ward"></p>
+
+
+<h3>13.Ajax-POST-2練習 application/json </h3>
+<form action="">
+    帳號:<input type="text" name="email" class="acc010" value="">
+    密碼:<input type="text" name="password" class="pass010" value="">
+    <input type="button" value="註冊" class="sub010">
+</form>
+<p class="ward0"></p>
+
+
+
+<h3>13.Ajax-POST-3練習 application/json 登入</h3>
+<form action="">
+    信箱:<input type="text" name="email" class="acc011" value="">
+    密碼:<input type="text" name="password" class="pass011" value="">
+    <input type="button" value="登入" class="sub011">
+</form>
+<p class="ward1"></p>
+
+<h3>14.ES6字串相加練習</h3>
+<ul class="plus"></ul>
+<!-- 以下測試選取器用&setAttribute測試 -->
+<div class="clu" alt="bu"><a href=""></a></div>
+<div class="clu"><a href=""></a></div>
+<div class="clu"><a href=""></a></div>
+<div class="clu"><a href=""></a></div>
+<div class="clu"><a href=""></a></div>
+
+<!-- 以下data測試 -->
+<div data-name="大雄" data-love="睡覺" class="hpp0"" ></div>
+
+</div> <!-- javascript-六角 END -->
+
+
+<div class="block00 block02" style="display: none;"> <!-- javascript-Mike -->
+<h3>---------------------------------------MIKE javascrip課程---------------------------------------------</h3>
+
+<!-- MIKE javascript課程 -->
+<a id=Btn>MIKE javascript</a>
+<span id="time"></span><span>秒數</span>
+<span id="time2"></span>
+<div class="Btn">1</div>
+<div class="Btn">2</div>
+<div class="Btn">3</div>
+<div class="Btn">4</div>
+
+<h3>--------------------------------------以下為MIKE老師JS進階課程----------------------------------------------</h3>
+
+<h3>物件兩種寫法 objec.name、objec[x]</h3>
+
+<h3>陣列包物件</h3>
+
+<h4>最新消息</h4>
+<ul id="news_tt"></ul>
+
+<div class="mid">
+    <input class="seach" type="text" value="線上課程">
+    <p>最近熱門搜尋:  
+        <a class="tag" href="javascript:;" >媽祖</a>、
+        <a class="tag" href="javascript:;" >地震</a>、
+        <a class="tag" href="javascript:;" >館長</a>、
+        <a class="tag" href="javascript:;" >線上課程</a>
+    </p>
+    <div class="seach_list">
+        <!-- <div class="item">
+            <a href="javascript:;" target="_blank" class="title">台灣媽祖信仰- 维基百科，自由的百科全书</a>
+            <a href="javascript:;" target="_blank" class="link">https://zh.wikipedia.org/zh-tw/台灣媽祖信仰</a>
+            <p>媽祖信仰是臺灣普遍民間信仰。早期移民多自華南渡海，心驚膽顫，且台灣四面環海，海上活動頻繁，海神媽祖婆成臺灣人重要精神託付。臺灣有媽祖廟510座以上，有 ...</p>
+        </div> -->
+    </div>
+</div>
+
+<div id="app001">
+
+    <ul class="tit_select">
+        <li></li>
+        <li>
+            <select id="user_money">
+                <option value="0">選擇錢</option>
+                <option value="300">大於300</option>
+                <option value="700">大於700</option>
+                <option value="10000">大於10000</option>
+            </select>
+        </li>
+        <li>
+            <select id="user_age">
+                <option value="0">選擇年齡</option>
+                <option value="10">10歲以上</option>
+                <option value="20">20歲以上</option>
+                <option value="30">30歲以上</option>
+            </select>
+        </li>
+        <li>
+            <select id="user_sex">
+                <option value="no">選擇性別</option>
+                <option value="boy">boy</option>
+                <option value="girl">girl</option>
+            </select>
+        </li>
+    </ul>
+    <ul class="tit">
+        <li>名字</li>
+        <li>戶頭錢</li>
+        <li>年齡</li>
+        <li>性別</li>
+    </ul>
+    <div class="itemList">
+        <!-- <ul class="tit2">
+            <li>小豬</li>
+            <li>12000</li>
+            <li>12</li>
+            <li>boy</li>
+        </ul> -->
+    </div>
+</div>
+
+
+<input type="checkbox" name="你好" id="how01" >
+<input type="checkbox" name="你好" id="how02">
+<input type="checkbox" name="你好" id="how03">
+<button disabled value="" id="howgo">送出</button>
+
+
+<input type="text" class="mikego" placeholder="請輸入mike可以含空隔">
+<button class="mikebutton">送出</button>
+
+
+<select name="city" id="city" style="width: 200px;">
+
+</select>
+<select name="area" id="area" style="width: 200px;"></select>
+
+
+
+
+</div><!-- javascript-Mike END -->
+
+
+
+
+
+
+
+<div class="block00 block03"> <!-- Vue-六角 -->
+<h3>----------------------------------------------VUE-----------------------------------------------------</h3>
+<h3>15.Vue資料綁定練習。{{word[0]}}</h3>
+<div id="app2">
+    {{word[0]}}
+    <!--{{Vue的data}}--> 
+</div>
+
+
+<div id="app3">
+
+
+
+
+<h3>16.v-for&v-if。 v-for="(todolist0,item) in todolist"。v-if="todolist0.重要程度>0</h3>
+<ul>          
+    <li v-for="(todolist0,item) in todolist" v-if="todolist0.重要程度>0">
+         <!--(自己命名，自己命名) in Vue的data       自己命名的參數>0   --> 
+        任務{{item+1}} : 今天是{{todolist0.星期幾}}，要{{todolist0.代辦}}。重要程度{{todolist0.重要程度}}
+    </li>
+</ul>
+
+
+<h3>17.v-bind 屬性指令。 v-bind:src="src"</h3>
+<img v-bind:src="src" v-bind:alt="alt" v-bind:style="style">
+ <!--v-bind:html屬性="Vue的data"--> 
+
+
+<h3>18.v-on 綁定事件。v-on:click="show"。
+    事件修飾符(v-on:click.prevent="show")。
+    按鍵修飾符(v-on:keyup.enter="show)
+</h3>                                                   
+<input type="text" v-model="ontest" v-on:keyup.enter="show">
+              <!--v-model="Vue的data"--> 
+<a href="#" v-on:click.prevent="show">按鈕</a>
+     <!--v-on:事件.事件修飾符="Vue的methods"--> 
+{{ontest2}}
+
+
+
+<h3>19.v-on簡寫"@"。v-bind簡寫 ":"</h3>
+
+
+<h3>20.動態切換class。v-bind:class="{'rotate':transform}"。 v-on:click.prevent="transform = !transform"</h3>
+<div class="box" v-bind:class="{'rotate':transform}">
+            <!--v-bind:html屬性="{'欲增加的CSS':Vue的data(true或false)}"--> 
+<a href="#" v-on:click.prevent="transform = !transform">旋轉吧</a>
+        <!--v-on:事件.事件修飾符="Vue的data = !Vue的data(true或false)"--> 
+</div>
+
+
+<h3>21.computed運算功能(Methods 與 Computed 的使用情境)</h3>
+{{show2}}
+
+
+<h3>22.表單資料綁定。 v-model</h3>
+<input type="text" v-model="text2">
+{{text2}}
+<br><span style="margin-bottom: 10px; display: block;"></span>
+<textarea name="" id="" cols="30" rows="10" v-model="text3"></textarea>
+{{text3}}
+<br><span style="margin-bottom: 10px; display: block;"></span>
+<input type="checkbox" v-model="checkbox" value="雞"><label for="">雞</label> 。checkbox:false
+<br><span style="margin-bottom: 10px; display: block;"></span>
+<input type="checkbox" v-model="checkbox2" value="豬肉鍋"> <label for="">豬肉鍋</label>
+<input type="checkbox" v-model="checkbox2" value="羊肉鍋"> <label for="">羊肉鍋</label>
+<input type="checkbox" v-model="checkbox2" value="牛肉鍋"> <label for="">牛肉鍋</label> 。checkbox2:[]
+<br>
+今天吃<span v-for="checkbox in checkbox2">{{checkbox}}、</span>
+<br><span style="margin-bottom: 10px; display: block;"></span>
+<input type="radio" name="eat"  v-model="checkbox3" value="豬肉鍋"> <label for="">豬肉鍋</label>
+<input type="radio" name="eat"  v-model="checkbox3" value="羊肉鍋"> <label for="">羊肉鍋</label>
+<input type="radio" name="eat"  v-model="checkbox3" value="牛肉鍋"> <label for="">牛肉鍋</label>。checkbox3:""
+<br><span style="margin-bottom: 10px; display: block;"></span>
+只能選一種鍋物:<span>{{checkbox3}}</span>
+<br><span style="margin-bottom: 10px; display: block;"></span>
+<select name="" id="" v-model="select">
+    <option value="請選擇" disabled>請選擇</option>
+    <option value="牛肉炒飯">牛肉炒飯</option>
+    <option value="香腸炒飯">好吃的香腸炒飯</option>
+</select>
+
+
+
+<h3>22.元件基礎概念。獨立運算。Vue.component('mycomponent',{});</h3>
+<button @click="button=button+1">{{button}}</button>
+<button @click="button=button+1">{{button}}</button>
+<mycomponent></mycomponent> 
+<mycomponent></mycomponent> 
+
+
+
+
+</div>
+
+<div id="app4">
+<h3>23.代辦清單實作</h3>
+<input type="text" v-model="newdo" @keyup.enter="add">
+<button @click="add">新增</button>
+<br>
+<ul class="ull">
+    <li @click="see='all'" :class="{'active':see=='all'}">全部</li>
+    <li @click="see='doing'" :class="{'active':see=='doing'}">進行中</li >
+    <li @click="see='finish'" :class="{'active':see=='finish'}" @click="refresh">已完成</li>
+</ul>
+<ul>
+    <li v-for="(item,idx) in trans_todolist" @dblclick="editodo(item)">
+        <div v-if="item.id !== todolist00.id">
+        <input type="checkbox" :id="item.id" v-model="item.finished"><label :class="{'splcie':item.finished}" :for="item.id">{{idx+1}}.{{item.something}}</label> <button @click="del(item)">X</button>
+        </div >
+        <input type="text" style="display: block;" v-if="item.id === todolist00.id" v-model="item.something" @keyup.esc="cancel" @keyup.enter="entergo">
+    </li>
+</ul>
+
+
+</div>
+
+
+<style>
+    .blcok{
+        display: block;
+        width: 150px;
+        height: 150px;
+        border:solid 1px #000;
+        transition: 1s;
+    }
+    .changecolor{
+        background: #d20000;
+    }
+    .roatex{
+        transform: rotate(45deg);
+  
+    }
+    </style>
+<div id="app5">
+    
+    <h3>24.進階模板說明</h3>
+    <p>//v-once 只綁定一次</p>
+    <input type="text" v-model="text">
+    <label for="" v-text="text" v-once></label>
+    <p>//練習不同表達式  { {value * value2} }</p>
+    {{text+text2}}
+    <br>
+    {{value + value2}}
+    <br>
+    {{value * value2}}
+
+    <p>//disaabled使用方法 //:disabled="true"
+    </p>
+    <button @click="dis = !dis">禁止輸入</button>
+    <input type="text" :disabled="dis">
+    <h3>25.動態改變CSS多種方法</h3>
+//方法一:基本 :class="{'roatex':rote,'changecolor':colortrue}"
+<br>
+    <div class="blcok" :class="{'roatex':rote,'changecolor':colortrue}"></div>
+    <button @click="rote = !rote">選轉吧</button>
+    <input type="checkbox" v-model="colortrue">改變顏色吧
+    <br>
+    <br>
+ //方法二:物件 :class="classrote"、data的classrote用物件
+ <div class="blcok" :class="classrote"></div>
+ <button @click="classrote.roatex = !classrote.roatex">選轉吧</button>
+ <input type="checkbox" v-model="classrote['changecolor']">改變顏色吧
+ <!-- //classrote.changecolor 可以改成 classrote['changecolor'] -->
+ <br>
+ <br>
+ //方法三:陣列(比較常用) :class="classrote2"、data的classrote2用空陣列[]
+ <div class="blcok" :class="classrote2"></div>
+ <input type="checkbox" v-model="classrote2" value="roatex">選轉吧
+ <input type="checkbox" v-model="classrote2" value="changecolor">改變顏色吧
+ <br>
+ <br>
+ //方法四:綁定行內樣式,:style
+ <br>
+ <br>
+ 物件{} //:style="{transform: 'rotate(45deg)', background: '#d20000'}"
+ <br>
+ <br>
+ <br>
+ <div class="blcok" :style="{transform: 'rotate(45deg)', background: '#d20000'}"></div>
+ <br> <br> <br>
+ 物件{}寫在data //:style="classrote3"><br> <br> <br>
+ <div class="blcok" :style="classrote3"></div>
+ <br> <br> <br>
+ 陣列//:style="[classrote3,classrote4]"、data的classrote3&classrote4是物件<br> <br> <br>
+
+
+ <div class="blcok" :style="[classrote3,classrote4]"></div>
+ <h3>24.v-for使用細節</h3>
+
+<br>
+//用物件 v-for="(peo,key) in people2">{ {key} }{ {peo.who} }{{peo.age} }歲
+<ul>
+    <li v-for="(peo,key) in people2">{{key}}{{peo.who}}{{peo.age}}歲</li>
+</ul>
+<br>
+//用陣列 v-for="(peo,key2) in people" :key="peo.age">{ {key2} }{ {peo.who} }{ {peo.age} }歲
+<br>
+加上:key="peo.age"，輸入文字後，按反轉也會跟著重新炫染
+<ul>
+   <li v-for="(peo,key2) in people" :key="peo.age">{{key2}}{{peo.who}}{{peo.age}}歲<input type="text"> </li>
+</ul>
+<button @click="reverseArray">反轉陣列</button>
+<br>
+<br>
+過濾
+filter:function(){
+    var vm = this
+    vm.filterarry=vm.people.filter(
+        function(peo){
+           
+            return vm.filterarry=peo.who.match(vm.text3)
+        }
+    )
+   
+},
+<br>
+
+ <input type="text" v-model="text3"  @click.keyup.enter="filter" >
+ <ul>
+    <li v-for="(peo,key2) in filterarry" :key="peo.age">{{key2}}{{peo.who}}{{peo.age}}歲<input type="text"> </li>
+ </ul>
+
+ <br>
+ <h3>25.v-for不能使用的情況/如何處理 // Vue.set(目標對象,第幾個,值)</h3>
+ <button @click="cannotwork">無法運轉</button>
+ <ul>
+    <li v-for="(peo,key2) in people2" :key="peo.age">{{key2}}{{peo.who}}{{peo.age}}歲<input type="text"> </li>
+ </ul>
+
+ <h3>26.純數字迴圈 //v-for="number in 5"</h3>
+ <ul>
+     <li v-for="number in 5">{{number}}</li>
+ </ul>
+
+ <h3>27.兩個元素(ex:tr、li)為一組使用v-for</h3>
+ <ul>
+     <template v-for="ppp in people">
+        <li>{{ppp.who}}</li>
+        <li>{{ppp.age}}</li>
+     </template>
+    
+ </ul>
+
+ <h3>28.v-for + v-if</h3>
+ <ul>
+    <li v-for="(peo,key2) in people" :key="peo.age" v-if="peo.age>30">{{key2}}{{peo.who}}{{peo.age}}歲<input type="text"> </li>
+ </ul>
+ <h3>29.v-else(使用v-if時，相鄰的元素可以使用v-else)</h3>
+ <div style="background: green;" v-if="active">啟用!</div>
+ <div style="background: pink;" v-else>不啟用</div>
+ <input type="checkbox" v-model="active"><label for="">開關</label>
+
+ <h3>30.同時需要切換多個元素時，v-if+template</h3>
+
+ <ul>
+     <template v-if="vtrue">
+        <li>張大同</li>
+        <li>25歲</li>
+     </template>
+     <li>王曉明</li>
+     <li>30歲</li>
+ </ul>
+ <input type="checkbox" v-model="vtrue"><label for="">一次消失兩組</label>
+
+ <h3>31.清單頁切換 //v-else-if="link == 'b'"</h3>
+
+ <ul class="liha">
+
+     <li @click="link = 'a'">頁籤1</li>
+     <li @click="link = 'b'">頁籤2</li>
+     <li @click="link = 'c'">頁籤3</li>
+ </ul>
+ <div v-if="link == 'a'">內容1</div>
+ <div v-else-if="link == 'b'">內容2</div>
+ <div v-else-if="link == 'c'">內容3</div>
+
+ <h3>32.KEY //輸入內容後，請觀察有無加key的結果</h3>
+ <template v-if="vtrue2" >
+     <label for="">帳號:</label>
+    <input type="text" :key="1">
+ </template>
+ <template v-else >
+    <label for="">信箱:</label>
+    <input type="text" :key="2">
+</template>
+<button @click="vtrue2 =!vtrue2">轉換吧!</button>
+
+<h3>33.v-show 和v-if 差不多，只是差在v-show是用dispaly:none、v-if是整個移除掉</h3>
+
+<h3>34.過濾 Computed用法 // v-for="item in filterarry2"//其中filterarry2是computed</h3>
+<input type="text" v-model="filtertext">
+<ul>
+    <li v-for="item in filterarry2">{{item.who}}{{item.age}}歲</li>
+</ul>
+
+<h3>35.使用 Computed 來呈現時間格式。//date先設datenow:0 //用computed設定data的datenow//再來用computed將data的datenow改變格式再用return回傳值
+</h3>
+<p>{{datetrans}}</p>
+
+
+<div class="blcok" :class="{'roatex':rote,'changecolor':colortrue}"></div>
+
+<h3>36.watch使用 //使用data一樣的資料進行資料改變</h3>
+<button @click="rote = true">選轉吧</button>
+<h3>37.生命週期 //加 < keep-alive>< / keep-alive > 切換頁面可以保留剛剛輸入的資料</h3>
+<a href="https://www.udemy.com/course/vue-hexschool/learn/lecture/10271464#overview" target="_blank">課程內容</a><br>
+<a href="http://127.0.0.1:5500/basic/v_lifecycle.html" target="_blank" >試試看< keep-alive>移除掉前後，觀察輸入資料和按按鈕時的console的狀態。</keep-alive></a>
+<br>
+
+<h3>38.基礎元件練習</h3>
+//setp1.先Vue一個Vue.component <br>
+//setp2.裡面要設props<br>
+//setp3.裡面要設#rowCompentTemplate(id)<br>
+
+<h4>1.用x-template的方式建立temple，有v-for情況下</h4>
+<h4>2.元件時，data的數字要用return</h4>
+<a href="https://www.udemy.com/course/vue-hexschool/learn/lecture/10271538#overview" target="_blank">課程內容</a><br>
+<a href="http://127.0.0.1:5500/components/basic.html" target="_blank" >試試看></a>
+
+<h3>39.使用let宣告變數</h3>
+//undefined 記憶體有準備位置，但沒有被定義<br>
+//not defined 沒有這個東西<br>
+//let只會在{}裡有效，不會感染到外層<br>
+//const 宣告後不能修改，但物件或陣列裡面是可以的<br>
+//在function 裡面設var一樣可以隔絕(區域變數)
+<h3>40.展開與其餘函數</h3>
+//將let groupB = groupA; 改成-> let groupB = [...groupA];。[...]就是取值直接從新丟進去<br>
+//function參數加...這樣就可以放多組值 (如:function moreMoney(...money))
+<h3>40.解構</h3>
+//setp1.鏡射、解構賦予值方法<br>
+let family = ['小明', '杰倫', '阿姨', '老媽', '老爸'];<br>
+let [a,b,c,d,e] = family<br>
+console.log(a,b,c,d,e) //結果:小明 杰倫 阿姨 老媽 老爸<br>
+
+
+
+
+</div>
+</div> <!-- Vue-六角END -->
+
+
+<div class="block00 block04"> <!-- Vue-姚錫瑋 -->
+<h3>----------------------------------------------------------------以下為姚老師Vue課程----------------------------------------------</h3>
+
+<h3>1.function 和 var 有hosting特性</h3>
+
+<h3>2.精確說法:let可以重新指定(reassign，設定=)，const不能重新指定(reassign，設定=)，但可以改變內容</h3>
+
+<h3>3.物件縮寫</h3>
+<h3>4.函式縮寫 //在物件裡面的function可以用縮寫</h3>
+<h3>5.解構賦值 //物件解構的名稱必須和物件裡面的名稱一樣
+    //物件解構不像陣列可以直接指派新名稱，需要多一道手續</h3>
+<h3>6.字串模板與多行字串 `` ${}。還可以塞表達式</h3>
+<div class="word" name="good" alt="123" style="margin: 32px;"></div>
+
+<h3>7.箭頭函式</h3>
+
+<h3>開始使用Vue</h3>
+<div id="app11">
+
+    {{message}}
+
+    {{num}}
+    <button @click='add'>增加1</button>
+
+    <h3>8.v-if //v-else前面一定要先有v-if</h3>
+    <span v-if="see">成立時出現我</span>
+    <span v-else="see">不成立時出現我</span>
+    <button @click="see = !see">轉換</button>
+    <h3>9.v-for 自我繁殖</h3>
+
+ 
+
+    <ul><li v-for="undo in undos">{{undo}}</li></ul>
+    <button @click="remove">移除最後一個 .pop</button>
+    <h3>v-model綁定資料</h3>
+    {{text}}
+    <input type="text" v-model="text">
+</div>
+<br>
+<h3>8.實做代辦清單</h3>
+<div id="todolist">
+<div>
+    <input type="text" v-model="thing">
+    <button @click="adding">Add</button>
+    <button @click="remove">remove</button>
+</div>
+<ul>
+    <li v-for="(todo,item) in todolist" @click="removethis(item)">{{todo}}</li>
+</ul>
+<h3>9.v-html(請勿讓使用者輸入，小心被埋病毒)、v-once(不會被變更)</h3>
+
+<div class="gotest">
+<span v-once>{{some}}</span>
+<span >{{some}}</span>
+<button @click="add0">增加0</button>
+<br><br>
+
+<input type="text" v-model="some2">
+<span v-html="some2"></span>
+</div>
+
+<h3>10.v-bind</h3>
+{{num}}
+<input type="checkbox" :checked="num%3===0">
+<button @click="change">change</button>
+
+<h3>11.template</h3>
+
+<div id="tem"></div>
+
+<h3>12.data //可以在外面指定data，資料會被套進去同步更新</h3>
+
+</div>
+<div id="data2">
+
+
+</div>
+<h3>13.this.XXX 可以指向data也可以指 methods，所以在創建時兩個不要撞名</h3>
+<div id="data3">
+<h1>{{count}}</h1>
+<button @click="add1" >+1</button>
+</div>
+
+<h3>14.Computed  //一定要retrun一個值 //還可以定義為一個物件 然後裡面有 get()、set() //get就是取值 //set就是設定</h3>
+<div id="computed">
+<input type="number" name="" id="" v-model="a">
++
+<input type="number" name="" id="" v-model="b">
+=<input type="number" name="" id="" v-model="c">
+{{c}}
+
+</div>
+
+
+<h3>15.watch</h3>
+<div id="watch">
+<input type="text" v-model="value">{{value2}}
+    
+    </div>
+
+</div><!-- Vue-姚錫瑋END -->
+
+
+
+
+
+ 
+<script src="js/all.js"></script>
+
+</body>
+</html>
+
+
