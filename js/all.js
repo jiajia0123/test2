@@ -407,7 +407,7 @@ for(var i =0;i<famrs0.length;i=i+1){
 
 
 
-//return 回傳值給function，範例如下。不懂請看六角第30章節
+//return 回傳值給function，範例如下。不懂請看第30章節
 function amed(){
     var ax = 20;
     var yx = 60;
